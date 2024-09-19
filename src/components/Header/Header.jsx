@@ -1,6 +1,10 @@
-import { FaMoon, FaSun } from "react-icons/fa";
-import { HiOutlineMenuAlt2 } from "react-icons/hi";
-import { MdSpaceDashboard } from "react-icons/md";
+import { FaMoon, FaGlobe  } from "react-icons/fa";
+import { HiOutlineMenuAlt2, HiOutlineMailOpen, HiMailOpen} from "react-icons/hi";
+import { MdOutlineLightMode, MdSpaceDashboard } from "react-icons/md";
+import { IoMdNotificationsOutline, IoIosNotifications } from "react-icons/io";
+import SearchBar from "./SearchBar";
+import { IoCardOutline, } from "react-icons/io5";
+import { CiGlobe } from "react-icons/ci";
 
 const Header = ({darkMode, toggleDarkMode, toggleSidebar}) => {
   return (
@@ -17,8 +21,21 @@ const Header = ({darkMode, toggleDarkMode, toggleSidebar}) => {
                 </a>
             </div>
 
-            <button className="dark:bg-slate-50 dark:text-slate-700  rounded-full p-2" onClick={toggleDarkMode}> {darkMode ? <FaSun/>:<FaMoon/>}</button>
+            <div className="col-sm-7 flex align-items-center pl-4">
+              <SearchBar/>
+            </div>
 
+
+
+            <div className="flex gap-2 align-items-center pl-4"> 
+              <button className=" hover:bg-gray-400 dark:bg-slate-50 dark:text-slate-700 p-3 rounded-full" onClick={toggleDarkMode}>{darkMode ? <IoMdNotificationsOutline className="h-5 w-5"/>:<IoIosNotifications className="h-5 w-5"/>} </button>
+              <button className=" hover:bg-gray-400 dark:bg-slate-50 dark:text-slate-700 p-3 rounded-full" onClick={toggleDarkMode}>{darkMode ? <CiGlobe className="h-5 w-5"/>:<FaGlobe/>}</button>
+              <button className="hover:bg-gray-400 dark:bg-slate-50 dark:text-slate-700 p-3 rounded-full" onClick={toggleDarkMode}> {darkMode ? <HiOutlineMailOpen className="h-5 w-5"/>:<HiMailOpen className="h-5 w-5"/>} </button>
+              <button className=" hover:bg-gray-400 dark:bg-slate-50 dark:text-slate-700  rounded-full p-3" onClick={toggleDarkMode}> {darkMode ? <MdOutlineLightMode className="h-5 w-5"/>:<FaMoon className="h-5 w-5"/>}</button>
+             
+ 
+            </div>
+            
          </div>
       </div>
     </nav>
