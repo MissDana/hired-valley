@@ -11,6 +11,7 @@ const Sidebar = ({isSidebarOpen}) => {
         {
           links.map((link, index)=>(
             <LinkItem key={index} {...link}/>
+        
           ))
         }
       </ul>

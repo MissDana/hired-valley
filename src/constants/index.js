@@ -10,7 +10,7 @@ import {
   IoIosLogOut,
 } from "react-icons/io";
 import {
-  FaChartBar,
+  FaChartBar, 
   FaCalendarAlt,
   FaFacebookMessenger,
   FaUsersCog,
@@ -58,12 +58,12 @@ export const links = [
     text: "Products",
   },
   {
-    href: "#",
+    href: "/sign-in",
     icon: IoIosLogIn,
     text: "Sign In",
   },
   {
-    href: "#",
+    href: "/sign-up",
     icon: IoIosLogOut,
     text: "Sign Up",
   },
